@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style type="text/css">
+    .vjs-danmaku-editor .vjs-danmaku-input {
+      color: #fff;
+      outline: none;
+      height: 20px;
+      border: 0 none;
+      padding: 4px;
+      box-sizing: border-box;
+      margin-top: 5px;
+      background-color: #42454a;
+      vertical-align: middle;
+    }
+    .vjs-danmaku-editor .vjs-danmaku-button {
+      cursor: pointer;
+      border: 1px solid #42454a;
+      border-left-width: 0;
+      height: 20px;
+      vertical-align: middle;
+      margin-top: 5px;
+    }
+    .vjs-danmaku-layout {
+      padding-top: 10px;
+      font-size: 18px;
+    }
+    .vjs-danmaku-item {
+      text-align: center;
+      opacity: .6;
+    }
+  </style>
+</head>
+<body>
+  <link href="//vjs.zencdn.net/7.10.2/video-js.min.css" rel="stylesheet">
+  <video
+    id="my-player"
+    class="video-js"
+    controls
+    preload="auto"
+    poster="//vjs.zencdn.net/v/oceans.png"
+    data-setup='{}'>
+    <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
+    <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"></source>
+    <source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"></source>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">
+        supports HTML5 video
+      </a>
+    </p>
+  </video>
+  <script src="//vjs.zencdn.net/7.10.2/video.min.js"></script>
+  <script type="text/javascript" src="../dist/videojs-danmaku.js"></script>
+  <script>
+    var danmaku = [{"comment":"hhh","update_time":"2021-03-11 18:19:27","progress":2,"username":"Jerry","id":51},{"comment":"bb","update_time":"2021-03-11 19:59:19","progress":2,"username":"Jerry","id":52},{"comment":"bb2","update_time":"2021-03-11 19:59:24","progress":2,"username":"Tom","id":53},{"comment":"wowowo","update_time":"2021-03-11 20:04:57","progress":17,"username":"Jerry","id":54},{"comment":"wo","update_time":"2021-03-11 20:09:57","progress":27,"username":"Jerry","id":55},{"comment":"ab","update_time":"2021-03-11 20:17:20","progress":34,"username":"Jerry","id":56},{"comment":"cd","update_time":"2021-03-11 20:18:28","progress":39,"username":"Tom","id":57},{"comment":"wwtest","update_time":"2021-03-11 20:37:06","progress":46,"username":"Tom","id":58},{"comment":"bbt1","update_time":"2021-03-11 20:54:05","progress":50,"username":"Jerry","id":59},{"comment":"bt2","update_time":"2021-03-11 21:00:28","progress":53,"username":"Jerry","id":60},{"comment":"bt3","update_time":"2021-03-11 21:05:35","progress":59,"username":"Tom","id":61}]
+
+    var player = videojs('my-player')
+    player.danmakus({
+      danmaku: danmaku,
+      submit: data => {
+        console.log(data)
+      }
+    })
+  </script>
+</body>
+</html>
