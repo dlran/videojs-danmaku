@@ -2,7 +2,7 @@
   "name": "videojs-danmaku",
   "version": "1.0.0",
   "description": "videojs-danmaku",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "node build/build.main.js"
   },
